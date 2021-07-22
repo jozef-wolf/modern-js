@@ -1,6 +1,13 @@
-let age = 30;
+const age = 30;
 
 if (true) {
-  console.log("inside 1st code block", age);
+  const age = 40;
+  const name = "josef";
+  console.log("inside 1st code block", age, name);
+  if (true) {
+    const age = 50;
+    console.log("inside 2nd code block", age);
+  }
 }
-console.log("outside code block", age);
+
+console.log("outside code block", age, name);

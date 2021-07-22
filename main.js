@@ -1,13 +1,31 @@
-const age = 30;
+// //callback & foreach
 
-if (true) {
-  const age = 40;
-  const name = "josef";
-  console.log("inside 1st code block", age, name);
-  if (true) {
-    const age = 50;
-    console.log("inside 2nd code block", age);
-  }
-}
+// const myFunc = (callbackFunc) => {
+//   //do something
+//   let value = 50;
+//   callbackFunc(value);
+// };
 
-console.log("outside code block", age, name);
+// myFunc(function (value) {
+//   // do something
+//   console.log(value);
+// });
+
+// let people = ["mario", "luigi", "ryu", "shaun", "chun-li"];
+
+// const logPerson = (person, index) => {
+//   console.log(`${index} - hello ${person}`);
+// };
+
+// people.forEach(logPerson);
+
+const people = ["mario", "luigi", "ryu", "shaun", "chun-li"];
+const ul = document.querySelector(".people");
+let html = ``;
+
+people.forEach((person, index) => {
+  html += `<li>${index + 1}.${person}</li>`;
+});
+console.log(html);
+
+ul.innerHTML = html;

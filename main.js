@@ -1,11 +1,22 @@
-let myArray = [12, 15, 2, 5, 33, 16, 54, 9];
+//primitive values
 
-const lowest = Math.min(...myArray);
-const highest = Math.max(...myArray);
+// let scoreOne = 50;
+// let scoreTwo = scoreOne;
 
-console.log("lowest number is:", lowest, "highest number is:", highest);
+// console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
 
-const getAverage = (nums) => nums.reduce((a, b) => a + b) / nums.length;
+// scoreOne = 100;
 
-const average = getAverage(myArray);
-console.log(average);
+// console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+
+//reference values
+
+const userOne = { name: "ryu", age: 30 };
+
+const userTwo = userOne;
+
+console.log(userOne, userTwo);
+
+userOne.name = "josef";
+
+console.log(userOne, userTwo);

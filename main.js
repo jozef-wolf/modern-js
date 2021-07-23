@@ -1,31 +1,11 @@
-// //callback & foreach
+let myArray = [12, 15, 2, 5, 33, 16, 54, 9];
 
-// const myFunc = (callbackFunc) => {
-//   //do something
-//   let value = 50;
-//   callbackFunc(value);
-// };
+const lowest = Math.min(...myArray);
+const highest = Math.max(...myArray);
 
-// myFunc(function (value) {
-//   // do something
-//   console.log(value);
-// });
+console.log("lowest number is:", lowest, "highest number is:", highest);
 
-// let people = ["mario", "luigi", "ryu", "shaun", "chun-li"];
+const getAverage = (nums) => nums.reduce((a, b) => a + b) / nums.length;
 
-// const logPerson = (person, index) => {
-//   console.log(`${index} - hello ${person}`);
-// };
-
-// people.forEach(logPerson);
-
-const people = ["mario", "luigi", "ryu", "shaun", "chun-li"];
-const ul = document.querySelector(".people");
-let html = ``;
-
-people.forEach((person, index) => {
-  html += `<li>${index + 1}.${person}</li>`;
-});
-console.log(html);
-
-ul.innerHTML = html;
+const average = getAverage(myArray);
+console.log(average);

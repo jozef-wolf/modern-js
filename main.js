@@ -1,32 +1,32 @@
-// const myArray = ["josef", "stanislav", "jan"];
-// let numbers = [11, 5, 36, 7, 22, 19, 1, 33];
-// myArray.push("weronika", "wiktoria");
-// myArray.sort();
+// function count() {
+//   for (let i = 0; i <= 100; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log(i, "FizzBuzz");
+//     } else if (i % 3 === 0) {
+//       console.log(i, "fizz");
+//     } else if (i % 5 === 0) {
+//       console.log(i, "buzz");
+//     } else {
+//       console.log(i);
+//     }
+//   }
+// }
+// count();
 
-// let strNumbers = numbers.map(function (e) {
-//   return e.toString();
-// });
+const numbers = [9, 8, 4, 5, 3, 6, 7, 1, 2];
 
-// console.log(strNumbers);
-// console.log(myArray);
-// const highestNumber = Math.max(...numbers);
-// const lowestNumber = Math.min(...numbers);
-
-// console.log(highestNumber);
-// console.log(lowestNumber);
-
-// const getAverage = () => numbers.reduce((a, b) => a + b) / numbers.length;
-
-// const averageNumbers = getAverage(numbers);
-
-// console.log(averageNumbers);
-
-const getTodos = async () => {
-  const response = await fetch(url);
-  const data = await response.json();
-  return data;
-};
-
-getTodos()
-  .then((data) => console.log("resolved", data))
-  .catch((err) => console.log("rejected"));
+function sort(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] > array[i + 1]) {
+        let temp = array[i];
+        array[i] = array[i + 1];
+        array[i + 1] = temp;
+        console.log(temp);
+      }
+    }
+  }
+  return;
+}
+sort(numbers);
+console.log(numbers);
